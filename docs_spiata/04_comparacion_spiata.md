@@ -1,24 +1,8 @@
-## Comparación con ataques similares
+# Tabla Comparativa de Marcos Regulatorios por Industria
 
-| Caso | País | Tipo de ataque | Resultado |
-|---|---|---|---|
-| Banco de Chile | Chile | Malware + SWIFT | Robo financiero |
-| WannaCry | Internacional | Ransomware | Interrupción masiva |
-| Colonial Pipeline | EE.UU. | Ransomware | Crisis operacional |
-| BHU Uruguay | Uruguay | Ransomware | Filtración de datos |
-
-## Similitudes
-- Uso de ingeniería social.
-- Persistencia en redes internas.
-- Movimiento lateral.
-- Exfiltración de datos.
-
-## Diferencias
-- El caso chileno se orientó principalmente al fraude financiero.
-- Otros casos priorizaron extorsión mediante ransomware.
-
-## Lecciones internacionales
-- Zero Trust.
-- MFA obligatorio.
-- Segmentación de red.
-- SOC y monitoreo continuo.
+| Eje de Comparación | Marco 1: RAN CMF Capítulo 20-10 (Financiero - Chile) | Marco 2: Ley N° 21.459 (Penal Informático - Chile) | Marco 3: ISO/IEC 27001:2022 (Estándar Global) |
+| :--- | :--- | :--- | :--- |
+| **Alcance y Ámbito** | Exclusivo para instituciones bancarias y financieras bajo fiscalización en Chile. | General. Aplica a cualquier persona natural o jurídica en territorio nacional chileno. | Universal y voluntario para organizaciones públicas o privadas de cualquier rubro. |
+| **Sujeto Regulado** | Entidades bancarias, ejecutivos de alta dirección y comités de riesgo. | El infractor o delincuente informático (sujeto activo del delito). | La organización que decide certificar sus procesos y controles de ciberseguridad. |
+| **Sanciones Asociadas**| Multas institucionales de carácter administrativo, amonestaciones y revocación de licencias de operación. | Penas privativas de libertad (presidio) y multas económicas directas a beneficio fiscal. | Pérdida o denegación de la certificación internacional; impacto comercial severo. |
+| **Aplicabilidad al Caso Concreto** | **Alta:** BancoEstado infringió los umbrales de continuidad operacional exigidos ante incidentes de ciberseguridad catastróficos. | **Alta:** Es el marco penal vinculante con el cual se interpuso la querella criminal por el sabotaje informático sufrido. | **Media:** Sirve como el estándar técnico de contraste para evaluar las brechas técnicas presentes en el banco. |
