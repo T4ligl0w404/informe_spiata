@@ -43,13 +43,12 @@ function App() {
         <section className="section">
           <h2>Resumen y propósito</h2>
           <p>
-            Este informe sintetiza los antecedentes del ataque, el marco normativo aplicable, la tipificación penal, la responsabilidad de los actores,
-            el tratamiento de datos personales y las principales recomendaciones de mitigación.
+            Este informe consiste en realizar un análisis legal riguroso y profundo de un caso real de ciberseguridad, estructurándolo como documentación técnica de la industria y presentándolo formalmente mediante una aplicación web interactiva en React.
           </p>
         </section>
 
         <nav className="section-nav">
-          <h3>Secciones del informe</h3>
+          <h2>Secciones del informe</h2>
           <ul>
             {sectionItems.map((item) => (
               <li key={item.id}>
@@ -65,18 +64,11 @@ function App() {
           </ul>
         </nav>
 
-        <section className="section">
-          {ActiveSectionComponent ? (
-            <ActiveSectionComponent id={activeSection} />
-          ) : (
-            <div className="section-placeholder">
-              <p>Selecciona una sección para ver su contenido.</p>
-            </div>
-          )}
+        <section className="section-content">
+          {ActiveSectionComponent ? <ActiveSectionComponent /> : <p></p>}
         </section>
       </main>
     </div>
   )
 }
-
 export default App

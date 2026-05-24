@@ -2,52 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --text: #0c0094;
-  --text-h: #2c4683;
-  --bg: #002aff;
-  --surface: #ff0000;
-  --border: #0037ff;
-  --accent: #0004ff;
-  --accent-bg: rgb(0, 4, 255);
-  --accent-border: rgba(0, 4, 255, 0.25);
-  --muted: #0055ff;
-  --shadow: rgba(34, 36, 77, 0.08) 0 18px 40px -20px, rgba(34, 36, 77, 0.05) 0 8px 24px -10px;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #00327e;
+    --text-h: #437197;
+    --bg: #c0e0ff;
+    --surface: #ffffff;
+    --border: #7faff8;
+    --border-border: #3045fd;
+    --accent: #000986;
+    --accent-bg: rgba(16, 99, 252, 0.14);
+    --accent-border: rgba(184, 89, 89, 0.35);
+    --muted: #7eaedb;
+    --shadow: rgba(52, 63, 185, 0.32) 0 18px 40px -20px, rgba(0, 0, 0, 0.22) 0 8px 24px -10px;
+  }
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  :root {
+    --shadow: rgba(34, 36, 77, 0.08) 0 18px 40px -20px, rgba(34, 36, 77, 0.05) 0 8px 24px -10px;
 
-  font: 18px/1.6 var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+    --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+    --mono: ui-monospace, Consolas, monospace;
+
+    font: 18px/1.6 var(--sans);
+    letter-spacing: 0.18px;
+    color-scheme: light dark;
+    color: var(--text);
+    background: var(--bg);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    .section-nav {
+      background-color:#ffffff;
+      border-radius: 24px;
+    padding: 25px;
+    }
+
+    .section-card-button {
+      background-color: #c3def8; /* El fondo suave actual de tus rectángulos */
+      color: #00327e;            /* El color azul del texto actual */
+      border: 1px solid #7faff8; /* Un borde sutil para definir el botón */
+      border-radius: 18px;
+      padding: 18px 20px;
+      width: 100%;
+      text-align: left;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out; 
+    }
+
+    .section-card-button:hover {
+      background-color: #9ec5f7; /* Se oscurece un poco simular que es "clickeable" */
+      transform: translateX(4px); /* Desplazamiento sutil a la derecha al posicionarse encima */
+    }
+
+    .section-card-button.active {
+      background-color: #709ce2; /* Azul vibrante para el botón activo */
+      color: #120077;            /* Texto blanco para que contraste perfectamente */
+      box-shadow: 0px 4px 12px rgba(59, 130, 246, 0.3); /* Sombra suave de enfoque */
+    }
+  }
 }
 
 @media (max-width: 1024px) {
   :root {
     font-size: 16px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #00327e;
-    --text-h: #4962f0;
-    --bg: #bcc1ff;
-    --surface: #ffffff;
-    --border: #7faff8;
-    --border-border: #3045fd;
-    --accent: #000986;
-    --accent-bg: rgba(24, 82, 189, 0.14);
-    --accent-border: rgba(184, 89, 89, 0.35);
-    --muted: #7d7bfa;
-    --shadow: rgba(52, 63, 185, 0.32) 0 18px 40px -20px, rgba(0, 0, 0, 0.22) 0 8px 24px -10px;
   }
 }
 
