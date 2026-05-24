@@ -42,6 +42,67 @@
   padding: 32px;
 }
 
+.section-nav {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 24px;
+  margin: 32px 0;
+}
+
+.section-nav h3 {
+  margin: 0 0 16px;
+}
+
+.section-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.section-nav li {
+  margin: 0;
+}
+
+.section-card-button {
+  width: 100%;
+  text-align: left;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.section-card-button:hover,
+.section-card-button:focus-visible {
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+.section-card-button.active {
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.section-placeholder {
+  color: var(--muted);
+  padding: 32px;
+  text-align: center;
+}
+
+@media (min-width: 800px) {
+  .section-nav ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 .section-grid {
   display: grid;
   gap: 24px;
@@ -81,6 +142,76 @@ td {
 th {
   background: var(--accent-bg);
   font-weight: 600;
+}
+
+.doc-content {
+  display: grid;
+  gap: 1rem;
+}
+
+.doc-content h3 {
+  margin-top: 1rem;
+}
+
+.doc-content h2 {
+  margin-top: 1.4rem;
+}
+
+.doc-content p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.75;
+}
+
+.doc-content ul {
+  padding-left: 1.35rem;
+  margin: 0;
+}
+
+.doc-content li {
+  margin-bottom: 0.65rem;
+}
+
+.doc-pre {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  overflow-x: auto;
+  font-family: var(--mono);
+  color: var(--text);
+}
+
+.doc-table-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.doc-table-box table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.doc-table-box th,
+.doc-table-box td {
+  padding: 16px;
+  border: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.doc-table-box th {
+  background: rgba(255, 255, 255, 0.12);
+  font-weight: 700;
+}
+
+.doc-table-box td {
+  white-space: normal;
+  line-height: 1.7;
 }
 
 .prompt-list {

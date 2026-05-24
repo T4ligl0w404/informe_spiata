@@ -37,16 +37,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #00327e;
-    --text-h: #4962f0;
-    --bg: #bcc1ff;
+    --text: #ff8800;
+    --text-h: #ffae00;
+    --bg: #fff6a1;
     --surface: #ffffff;
-    --border: #7faff8;
-    --border-border: #3045fd;
-    --accent: #000986;
+    --border: #f8dc7f;
+    --border-border: #fdcd30;
+    --accent: #ff7b00;
     --accent-bg: rgba(24, 82, 189, 0.14);
     --accent-border: rgba(184, 89, 89, 0.35);
-    --muted: #7d7bfa;
+    --muted: #ffbd08;
     --shadow: rgba(52, 63, 185, 0.32) 0 18px 40px -20px, rgba(0, 0, 0, 0.22) 0 8px 24px -10px;
   }
 }
