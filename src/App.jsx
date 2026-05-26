@@ -14,10 +14,9 @@ const sectionItems = [
   { id: 'marco', label: 'Marco Normativo Aplicable', Component: Marco },
   { id: 'delitos', label: 'Delitos y artículos Ley 21.459', Component: Delitos },
   { id: 'comparacion', label: 'Tabla comparativa de marcos', Component: Comparacion },
-  { id: 'responsabilidades', label: 'Actores y responsabilidades', Component: Responsabilidades },
-  { id: 'datos', label: 'Datos personales y derechos ARCO', Component: Datos },
-  { id: 'conclusiones', label: 'Recomendaciones finales', Component: Conclusiones },
-  { id: 'prompts', label: 'Bitácora de uso de IA', Component: Prompts },
+  { id: 'responsabilidades', label: 'Actores responsables', Component: Responsabilidades },
+  { id: 'datos', label: 'Datos personales', Component: Datos },
+  { id: 'conclusiones', label: 'Conclusión del caso', Component: Conclusiones },
 ]
 
 function App() {

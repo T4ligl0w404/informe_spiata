@@ -164,7 +164,7 @@ function App() {
           <h2>Responsabilidad</h2>
           <div className="section-grid">
             <article className="card">
-              <h3>Responsabilidad penal</h3>
+              <h3>Responsabilidad pen</h3>
               <ul>
                 <li>Fraude informático.</li>
                 <li>Acceso ilícito.</li>

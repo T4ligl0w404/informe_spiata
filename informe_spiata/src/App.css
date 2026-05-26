@@ -69,6 +69,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   min-width: 640px;
+  table-layout: fixed;
 }
 
 th,
@@ -76,11 +77,18 @@ td {
   padding: 16px;
   border: 1px solid var(--border);
   text-align: left;
+  width: 25%;
+  box-sizing: border-box;
 }
 
 th {
-  background: var(--accent-bg);
   font-weight: 600;
+}
+
+/* aplicar color solo a la fila de encabezado */
+thead th {
+  background: var(--accent-bg);
+}
 }
 
 .prompt-list {

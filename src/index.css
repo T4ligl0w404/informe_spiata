@@ -63,11 +63,11 @@
     --text-h: #437197;
     --bg: #c0e0ff;
     --surface: #ffffff;
-    --border: #7faff8;
+    --border: #4480da;
     --border-border: #3045fd;
     --accent: #000986;
-    --accent-bg: rgba(16, 99, 252, 0.14);
-    --accent-border: rgba(184, 89, 89, 0.35);
+    --accent-bg: rgba(253, 253, 253, 0.14);
+    --accent-border: rgba(255, 255, 255, 0.35);
     --muted: #7eaedb;
     --shadow: rgba(52, 63, 185, 0.32) 0 18px 40px -20px, rgba(0, 0, 0, 0.22) 0 8px 24px -10px;
   }

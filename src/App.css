@@ -194,6 +194,7 @@ th {
   width: 100%;
   border-collapse: collapse;
   min-width: 640px;
+  table-layout: fixed;
 }
 
 .doc-table-box th,
@@ -202,9 +203,11 @@ th {
   border: 1px solid var(--border);
   text-align: left;
   vertical-align: top;
+  width: 25%;
+  box-sizing: border-box;
 }
 
-.doc-table-box th {
+.doc-table-box thead th {
   background: rgba(255, 255, 255, 0.12);
   font-weight: 700;
 }
