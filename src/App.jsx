@@ -58,23 +58,19 @@ function App() {
             Este sitio contiene el análisis legal del caso asignado. Las secciones se irán 
             incorporando como componentes individuales a través del menú de navegación interactivo.
           </p>
-        </div>
+        </div> <hr></hr>
 
         {/* MENÚ DE NAVEGACIÓN (Botones para cambiar de componente) */}
-        <nav className="bg-white rounded-lg shadow p-6 mb-6">
-          <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3">
+        <nav className="section-nav mb-6">
+          <h3 className="section-nav-title">
             Secciones del Informe
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {sectionItems.map((item) => (
               <button
                 key={item.id}
                 type="button"
-                className={`text-left px-4 py-3 rounded-md transition-colors font-medium border ${
-                  activeSection === item.id
-                    ? 'bg-slate-900 text-white border-slate-900'
-                    : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
-                }`}
+                className={`section-card-button ${activeSection === item.id ? 'active' : ''}`}
                 onClick={() => setActiveSection(item.id)}
               >
                 {item.label}
@@ -90,6 +86,10 @@ function App() {
           </div>
         )}
       </main>
+
+      <div>
+        
+      </div>
 
       {/* FOOTER (Estructura formal pedida por el docente) */}
       <footer className="bg-slate-100 text-slate-600 text-sm py-4 px-6 border-t border-slate-200">

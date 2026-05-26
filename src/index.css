@@ -2,6 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --nav-bg: #f8fbff;
+  --nav-border: rgba(102, 126, 234, 0.18);
+  --nav-title: #334155;
+  --nav-button-bg: #e2efff;
+  --nav-button-text: #1e3a8a;
+  --nav-button-border: rgba(99, 102, 241, 0.22);
+  --nav-button-hover-bg: #d4e6ff;
+  --nav-button-active-bg: #4758d5;
+  --nav-button-active-text: #ffffff;
+  --nav-button-shadow: 0 12px 30px rgba(71, 92, 213, 0.18);
+}
+
+.section-nav {
+  background: var(--nav-bg);
+  border: 1px solid var(--nav-border);
+  border-radius: 32px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.06);
+  padding: 28px;
+}
+
+.section-nav-title {
+  color: var(--nav-title);
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.section-card-button {
+  background: var(--nav-button-bg);
+  color: var(--nav-button-text);
+  border: 1px solid var(--nav-button-border);
+  border-radius: 20px;
+  padding: 18px 20px;
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.section-card-button:hover {
+  background: var(--nav-button-hover-bg);
+  transform: translateY(-1px);
+}
+
+.section-card-button.active {
+  background: var(--nav-button-active-bg);
+  color: var(--nav-button-active-text);
+  box-shadow: var(--nav-button-shadow);
+  border-color: transparent;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #00327e;
