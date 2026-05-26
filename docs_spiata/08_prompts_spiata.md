@@ -3,10 +3,10 @@
 Este documento constituye la bitácora oficial del uso de herramientas de Inteligencia Artificial para el desarrollo del análisis legal del ciberataque de Ransomware Sodinokibi a BancoEstado (2020), en cumplimiento con los requerimientos transversales de la asignatura.
 
 ## 1. Fase de Investigación y Resumen del Caso
-* **Herramienta utilizada:** Gemini 1.5 Pro / ChatGPT (Interfaz Web de Chatbot).
+* Herramienta utilizada: Gemini 1.5 Pro / ChatGPT (Interfaz Web de Chatbot).
 
 ### Prompt Textual Enviado:
-> "Actúa como un experto en ciberseguridad y auditoría informática. Necesito investigar el caso real del ataque de ransomware que sufrió el banco estatal chileno 'BancoEstado' en septiembre de 2020. Entrega un resumen ejecutivo estructurado con los siguientes puntos: ¿Qué pasó y Cuándo? ¿Quiénes participaron? y su Impacto y Magnitud del Incidente."
+> "Actúa como un experto en ciberseguridad y auditoría informática. Necesito investigar el caso real del ataque de ransomware que sufrió el banco estatal chileno 'BancoEstado' en septiembre de 2020. Entrega un resumen ejecutivo estructurado con los siguientes puntos: ¿Qué pasó y Cuándo? ¿Quiénes participaron? y su Impacto y Magnitud del Incidente. Utiliza los siguientes links para sacar información: "
 
 La IA identificó correctamente a quienes participaron, el ¿Qué paso y cuándo? e incluso su impacto y magnitud.
 

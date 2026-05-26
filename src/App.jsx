@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './App.css'
+import { Shield, BookOpen } from 'lucide-react' // Importados desde la imagen
 import Resumen from './components/Resumen.jsx'
 import Marco from './components/Marco.jsx'
 import Delitos from './components/Delitos.jsx'
@@ -28,47 +28,79 @@ function App() {
     : null
 
   return (
-    <div className="app">
-      <header className="page-header">
-        <div className="hero-copy">
-          <span className="eyebrow">Informe SPIATA</span>
-          <h1>Análisis jurídico del ataque a BancoEstado</h1>
-          <p className="intro">
-            Presentación formal del análisis jurídico, normativo y técnico relacionado con el incidente de ransomware en BancoEstado, basado en el contenido de los documentos del proyecto.
-          </p>
+    <div className="min-h-screen bg-slate-50 flex flex-col">
+      
+      {/* HEADER (Estructura de la imagen con tus datos de BancoEstado) */}
+      <header className="bg-slate-900 text-white py-10 px-6 shadow">
+        <div className="max-w-4xl mx-auto flex items-center gap-4">
+          <Shield size={40} className="text-red-400" />
+          <div>
+            <h1 className="text-3xl font-bold">Evaluación 2 -- Unidad 2</h1>
+            <p className="text-slate-300 mt-1">
+              TI3034 -- Fundamentos de Seguridad de la Información | Análisis BancoEstado
+            </p>
+          </div>
         </div>
       </header>
 
-      <main>
-        <section className="section">
-          <h2>Resumen y propósito</h2>
-          <p>
-            Este informe consiste en realizar un análisis legal riguroso y profundo de un caso real de ciberseguridad, estructurándolo como documentación técnica de la industria y presentándolo formalmente mediante una aplicación web interactiva en React.
+      {/* CONTENIDO PRINCIPAL */}
+      <main className="flex-1 max-w-4xl mx-auto px-6 py-12 w-full">
+        
+        {/* Sección de Bienvenida / Propósito fija */}
+        <div className="bg-white rounded-lg shadow p-8 mb-6">
+          <div className="flex items-center gap-3 mb-4">
+            <BookOpen className="text-slate-700" />
+            <h2 className="text-xl font-semibold text-slate-800">
+              Análisis jurídico del ataque a BancoEstado
+            </h2>
+          </div>
+          <p className="text-slate-600 leading-relaxed">
+            Este sitio contiene el análisis legal del caso asignado. Las secciones se irán 
+            incorporando como componentes individuales a través del menú de navegación interactivo.
           </p>
-        </section>
+        </div>
 
-        <nav className="section-nav">
-          <h2>Secciones del informe</h2>
-          <ul>
+        {/* MENÚ DE NAVEGACIÓN (Botones para cambiar de componente) */}
+        <nav className="bg-white rounded-lg shadow p-6 mb-6">
+          <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3">
+            Secciones del Informe
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             {sectionItems.map((item) => (
-              <li key={item.id}>
-                <button
-                  type="button"
-                  className={`section-card-button ${activeSection === item.id ? 'active' : ''}`}
-                  onClick={() => setActiveSection(item.id)}
-                >
-                  {item.label}
-                </button>
-              </li>
+              <button
+                key={item.id}
+                type="button"
+                className={`text-left px-4 py-3 rounded-md transition-colors font-medium border ${
+                  activeSection === item.id
+                    ? 'bg-slate-900 text-white border-slate-900'
+                    : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
+                }`}
+                onClick={() => setActiveSection(item.id)}
+              >
+                {item.label}
+              </button>
             ))}
-          </ul>
+          </div>
         </nav>
 
-        <section className="section-content">
-          {ActiveSectionComponent ? <ActiveSectionComponent /> : <p></p>}
-        </section>
+        {/* CONTENIDO DINÁMICO (Muestra el componente seleccionado) */}
+        {ActiveSectionComponent && (
+          <div className="bg-white rounded-lg shadow p-8 animate-fadeIn">
+            <ActiveSectionComponent />
+          </div>
+        )}
       </main>
+
+      {/* FOOTER (Estructura formal pedida por el docente) */}
+      <footer className="bg-slate-100 text-slate-600 text-sm py-4 px-6 border-t border-slate-200">
+        <div className="max-w-4xl mx-auto flex justify-between items-center">
+          <span><strong>Estudiante:</strong> Atalía Anaís Spielmann Flores</span>
+          <span><strong>Docente:</strong> Rubén Schnettler L. -- INACAP Valparaíso</span>
+        </div>
+      </footer>
+
     </div>
   )
 }
+
 export default App
